@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Home | Pi Sigma Alpha | The University of Georgia</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="psa.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link rel="icon" type="image/png" href="resources/favicon.png">
+    </head>
+    
+    <body>
+
+        <!-- nav bar -->    
+        <div class="example3">
+            <nav class="navbar navbar-inverse navbar-static-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar3">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="index.html"><img src="resources/thumb.jpg" alt="PSA"></a>
+                    </div>
+                    <div id="navbar3" class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="active"><a href="index.html">Home</a></li>
+                            <li><a href="apply.html">Apply</a></li>
+                            <li><a href="calendar.html">Calendar</a></li>
+                            <li><a href="officers.html">Officers</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                  <!--/.nav-collapse -->
+                </div>
+                <!--/.container-fluid -->
+            </nav>
+        </div>
+        <!-- end nav bar -->
+
+        <!-- main text -->
+        <div class="container">
+            <div class="col-sm-4">
+                <h1>Pi Sigma Alpha<br><small>Alpha Pi Chapter</small></h1>
+                
+                <p>The University of Georgia has the Alpha Pi Chapter of Pi Sigma Alpha, The National Political Science Honor Society. View our membership requirements on our <a href="apply.html">Apply</a> page. Applications are accepted throughout the year. New members are inducted each spring and participate in the Honors Day convocation. The membership fee is $45. <p>For more information, students may speak to an advisor and faculty sponsor, <a target="_blank" href="http://spia.uga.edu/faculty-member/anthony-madonna/">Dr. Anthony Madonna</a>, any of the <a href="officers.html">Pi Sigma Alpha officers</a>, or visit our <a href="contact.html">Contact Us</a> page.</p> 
+            </div>
+    
+            <!-- slideshow -->
+            <div class="col-md-8">
+                <div class="slideshow-container" style="margin:30px;">
+                    <div class="mySlides">
+                        <div class="numbertext">1 / 3</div>
+                        <img src="resources/test_pictures/stickers.jpg" style="width:100%">
+                        <div class="text"></div>
+                    </div>
+
+                    <div class="mySlides">
+                        <div class="numbertext">2 / 3</div>
+                        <img src="resources/test_pictures/psa_event.jpg" style="width:100%">
+                        <div class="text"></div>
+                    </div>
+
+                    <div class="mySlides">
+                        <div class="numbertext">3 / 3</div>
+                        <img src="resources/test_pictures/Baldwin.jpg" style="width:100%">
+                        <div class="text"></div>
+                    </div>
+
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+                <br>
+                
+                <script>
+                    var slideIndex = 1;
+                    showSlides();
+                   
+                    function plusSlides(n) {
+                      showSlides(slideIndex += n);
+                    }
+
+                    function currentSlide(n) {
+                      showSlides(slideIndex = n);
+                    }
+
+                    function showSlides(n) {
+                      var i;
+                      var slides = document.getElementsByClassName("mySlides");
+                      var dots = document.getElementsByClassName("dot");
+                      if (n > slides.length) {slideIndex = 1} 
+                      if (n < 1) {slideIndex = slides.length}
+                      for (i = 0; i < slides.length; i++) {
+                          slides[i].style.display = "none"; 
+                      }
+                      for (i = 0; i < dots.length; i++) {
+                          dots[i].className = dots[i].className.replace(" active", "");
+                      }
+                      slides[slideIndex-1].style.display = "block"; 
+                      dots[slideIndex-1].className += " active";
+                    }
+                </script>
+            </div>
+        </div>
+    </body>
+</html>
